@@ -15,7 +15,7 @@ int feedTime = 0;
 int cnt = 1;
 int mins = 0;
 int num_cats = 2;
-int quarter_cup = 5 * num_cats;  // 10 is a quarter of a cup 
+int portions = 5 * num_cats;  // 10 is a half of a cup 
 bool dispensing = true;
 bool startup = true;
 
@@ -55,7 +55,7 @@ void loop() {
     if(jamDetect() == false)
       dispenseFood();
       
-    if(cnt == quarter_cup){
+    if(cnt == portions){
       cnt = 0;
       dispensing = false;
     }
